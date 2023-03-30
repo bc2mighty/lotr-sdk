@@ -17,8 +17,7 @@ $ npm i lotr-movie-sdk
 ## Getting Started <a name="getting-started"></a>
 You need to create an instance of the `MovieSDK` class. The `MovieSDK` instance must be instantiated with your `clientSecret` and `clientKey`. We have provided test credentials for both which are used below:
 ```javascript
-import MovieSDK from 'lotr-movie-sdk/api';
-import { MovieConfiguration, MovieIDObject } from 'lotr-movie-sdk/types';
+import {MovieSDK, MovieConfiguration, MovieIDObject} from 'lotr-movie-sdk';
 const movieConfig: MovieConfiguration = {
     clientSecret: 'abcd',
     clientKey: '1234'
