@@ -1,22 +1,24 @@
-import MovieSDK, { MovieConfiguration, MovieIDObject } from '../api';
+import MovieSDK from "../api";
+import { MovieConfiguration, MovieIDObject } from '../types';
+
+const correctMovieSDKConfig: MovieConfiguration = {
+    clientSecret: 'abcd',
+    clientKey: '1234'
+};
+const incorrectMovieSDKConfig: MovieConfiguration = {
+    clientSecret: 'abcde',
+    clientKey: '1234'
+};
 
 describe('Movie SDK Test', () => {
     test('Should throw `Invalid Credentials` error when wrong clientSecret and clientKey are provided', async() => {
-        const movieConfig: MovieConfiguration = {
-            clientSecret: 'abcde',
-            clientKey: '1234'
-        };
-        const initializeMovie = () => {new MovieSDK(movieConfig)}
+        const initializeMovie = () => {new MovieSDK(incorrectMovieSDKConfig)}
         expect(initializeMovie).toThrowError(Error)
         expect(initializeMovie).toThrow('Invalid keys provided')
     })
 
     test('Should return all movie data', async () => {
-        const movieConfig: MovieConfiguration = {
-            clientSecret: 'abcd',
-            clientKey: '1234'
-          };
-        const movie = new MovieSDK(movieConfig);
+        const movie = new MovieSDK(correctMovieSDKConfig);
     
         const data = [
             {
@@ -49,11 +51,7 @@ describe('Movie SDK Test', () => {
     })
 
     test('Should return a single movie using the provided movieID object', async () => {
-        const movieConfig: MovieConfiguration = {
-            clientSecret: 'abcd',
-            clientKey: '1234'
-          };
-        const movie = new MovieSDK(movieConfig);
+        const movie = new MovieSDK(correctMovieSDKConfig);
     
         const data = [
             {
@@ -79,11 +77,7 @@ describe('Movie SDK Test', () => {
     })
 
     test('Should return Movie quotes', async () => {
-        const movieConfig: MovieConfiguration = {
-            clientSecret: 'abcd',
-            clientKey: '1234'
-          };
-        const movie = new MovieSDK(movieConfig);
+        const movie = new MovieSDK(correctMovieSDKConfig);
     
         const data = [
             {
