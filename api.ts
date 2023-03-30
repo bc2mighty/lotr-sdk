@@ -70,7 +70,7 @@ export default class Movie {
      *
      * @param movieQuote
      */
-  public async getByQuote (movieQuote: MovieIDObject): Promise<MovieQuoteData[] | null> {
+  public async getQuotes (movieQuote: MovieIDObject): Promise<MovieQuoteData[] | null> {
     try {
       const response: AxiosResponse<MovieQuoteFullResponse> = await axios.get(`https://the-one-api.dev/v2/movie/${movieQuote.id}/quote`, {
         headers: {

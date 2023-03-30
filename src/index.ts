@@ -37,7 +37,7 @@ app.get('/:id/:quote', async function (req: Request, res: Response) {
     const movieIDObj: MovieIDObject = {
       id: req.params.id
     };
-    const data = await movie.getByQuote(movieIDObj);
+    const data = await movie.getQuotes(movieIDObj);
     return res.status(200).json(data);
   } catch (error: any) {
     console.log(error);
