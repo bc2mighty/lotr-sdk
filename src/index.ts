@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import Movie from '../api';
+import MovieSDK from '../api';
 import { MovieConfiguration, MovieIDObject } from '../types';
 const app = express();
 
@@ -7,7 +7,7 @@ const movieConfig: MovieConfiguration = {
   clientSecret: 'abcd',
   clientKey: '1234'
 };
-const movie = new Movie(movieConfig);
+const movie = new MovieSDK(movieConfig);
 
 app.get('/', async function (req: Request, res: Response) {
   try {
