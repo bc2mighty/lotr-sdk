@@ -1,6 +1,5 @@
 import express, { Request, Response } from 'express';
-import MovieSDK from '../api';
-import { MovieConfiguration, MovieIDObject } from '../types';
+import { MovieSDK, MovieConfiguration, MovieIDObject } from '../index';
 const app = express();
 
 const movieConfig: MovieConfiguration = {

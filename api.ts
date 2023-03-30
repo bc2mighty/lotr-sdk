@@ -5,7 +5,7 @@ import { getAxiosErrorMessage } from './utils/axios';
 /**
  * @class Movie
  */
-export default class MovieSDK {
+export class MovieSDK {
   private readonly clientSecret = 'abcd';
   private readonly clientKey = '1234';
   private readonly movieAccessKey = 'bLP4jIKaknNFbz7C4UXS';

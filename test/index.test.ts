@@ -1,5 +1,4 @@
-import MovieSDK from "../api";
-import { MovieConfiguration, MovieIDObject } from '../types';
+import { MovieSDK, MovieConfiguration, MovieIDObject } from '../index';
 
 const correctMovieSDKConfig: MovieConfiguration = {
     clientSecret: 'abcd',

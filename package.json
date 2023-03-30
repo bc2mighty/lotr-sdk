@@ -1,8 +1,7 @@
 {
   "name": "lotr-movie-sdk",
-  "version": "1.0.7",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.11",
+  "description": "Lord of the rings movie SDK",
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/index.js",
